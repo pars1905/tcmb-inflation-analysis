@@ -1,10 +1,10 @@
-![Banner](https://raw.githubusercontent.com/pars1905/tcmb-inflation-analysis/main/banner.png)
+![Banner](banner.png)
 
 # 📈 TCMB Inflation & Exchange Rate Analysis
 
 > Time series analysis of Turkey's CPI, PPI and USD/TRY exchange rate using official Central Bank (TCMB) data.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![pandas](https://img.shields.io/badge/pandas-2.0-150458?logo=pandas) ![matplotlib](https://img.shields.io/badge/matplotlib-visualization-orange) ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python) ![pandas](https://img.shields.io/badge/pandas-2.0-150458?logo=pandas) ![matplotlib](https://img.shields.io/badge/matplotlib-visualization-orange) ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 
 ---
 
@@ -19,35 +19,44 @@ This project analyzes Turkey's macroeconomic indicators including consumer price
 
 ---
 
+## 📊 Visualizations
+
+### Trend Analysis (2014–2024)
+![Trend Analysis](grafik1_trend.png)
+
+### Correlation Analysis
+![Correlation Analysis](grafik2_korelasyon.png)
+
+### Economic Dashboard
+![Dashboard](grafik3_dashboard.png)
+
+---
+
+## 🔍 Key Findings
+
+1. **Dramatic inflation surge after 2021** — Turkey's CPI jumped from 19.6% (2021) to 72.3% (2022), marking a structural break in price stability.
+2. **Strong USD/TRY ↔ CPI correlation (0.95+)** — Exchange rate depreciation is the dominant driver of consumer inflation.
+3. **PPI leads CPI by 3–6 months** — Producer price increases transmit to consumer prices with a measurable lag.
+4. **Partial normalization post-2022** — CPI declined from 72.3% peak to 44.4% by 2024, suggesting early stabilization.
+
+---
+
 ## 📂 Dataset
 
 | Source | Description | Access |
 |---|---|---|
 | [TCMB EVDS](https://evds2.tcmb.gov.tr) | Official Central Bank data portal | Free / API |
-| CPI (TÜFE) | Monthly consumer price index | TCMB EVDS |
-| PPI (ÜFE) | Monthly producer price index | TCMB EVDS |
-| USD/TRY | Daily exchange rate | TCMB EVDS |
+| CPI (TÜFE) | Annual consumer price index | TCMB EVDS |
+| PPI (ÜFE) | Annual producer price index | TCMB EVDS |
+| USD/TRY | Annual average exchange rate | TCMB EVDS |
 
 ---
 
 ## 🛠️ Tools & Libraries
 
-- **Python 3.10**
-- **pandas** — data cleaning & transformation
-- **matplotlib / seaborn** — visualization
-- **numpy** — statistical calculations
-- **statsmodels** — time series decomposition
-
----
-
-## 📊 Analysis Steps
-
-1. Data extraction from TCMB EVDS (CSV download / API)
-2. Data cleaning and datetime indexing
-3. Trend visualization — CPI, PPI, USD/TRY over time
-4. Correlation analysis between exchange rate and inflation
-5. Rolling average and seasonal decomposition
-6. Key findings and interpretation
+- **Python 3.10** · **pandas** · **numpy**
+- **matplotlib** · **seaborn** — visualization
+- **Google Colab** — cloud notebook environment
 
 ---
 
@@ -55,21 +64,23 @@ This project analyzes Turkey's macroeconomic indicators including consumer price
 
 ```
 tcmb-inflation-analysis/
-├── data/
-│   ├── raw/          # Original TCMB CSV files
-│   └── processed/    # Cleaned datasets
-├── notebooks/
-│   └── analysis.ipynb
-├── visuals/          # Output charts and graphs
-├── banner.png
+├── tcmb_inflation_analysis.ipynb   ← Main analysis notebook
+├── grafik1_trend.png               ← Trend analysis chart
+├── grafik2_korelasyon.png          ← Correlation analysis chart
+├── grafik3_dashboard.png           ← Economic dashboard
+├── banner.png                      ← Repository banner
 └── README.md
 ```
 
 ---
 
-## 🔍 Key Findings
+## 📊 Summary Statistics
 
-> 🚧 Analysis in progress — findings will be updated upon completion.
+| Indicator | Min | Max | Average |
+|---|---|---|---|
+| CPI (Annual %) | 7.7% (2015) | 72.3% (2022) | 28.5% |
+| PPI (Annual %) | 5.7% (2015) | 97.7% (2022) | 29.4% |
+| USD/TRY | 2.19 (2014) | 32.90 (2024) | 11.46 |
 
 ---
 
