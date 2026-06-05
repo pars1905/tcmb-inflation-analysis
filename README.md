@@ -1,4 +1,4 @@
-
+![Banner](https://raw.githubusercontent.com/pars1905/tcmb-inflation-analysis/main/banner.png)
 
 # 📈 TCMB Inflation & Exchange Rate Analysis
 
